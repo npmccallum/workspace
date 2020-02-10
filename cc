@@ -10,15 +10,15 @@ import os
 spec = {
     # TODO: this crate should produce a relocatable, self-contained binary.
     "code": {
-        "remove": [ "-Wl,-Bdynamic" ],
-        "insert": [ "-static", "-static-libgcc" ],
+        "remove": [ ],
+        "insert": [ ],
     },
 
-    # TODO: this crate should produce a relocatable, self-contained binary
-    # with a custom entry point.
+    # This crate should produce a relocatable, self-contained binary
+    # with a custom entry point. I **think** it is currently working.
     "shim": {
         "remove": [ "-Bdynamic" ],
-        "insert": [ "-static", "-nostdlib" ],
+        "insert": [ "-nostdlib" ],
     }
 }
 
