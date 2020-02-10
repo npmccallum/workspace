@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "host",
+    "shim",
+    "code",
+]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
